@@ -1,0 +1,28 @@
+.login {
+    display: inline-block;
+}
+.warning {
+    color: red;
+}
+.success {
+    color: green;
+}
+/*
+#key {
+    float: left;
+}
+#key2{
+    float: right;
+}
+*/
+h1 {
+	font-family: cursive;
+	/*font-size: 1.5em;*/
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	/*line-height: 1.1em;*/
+}
+#image {
+    max-width: 170%;
+}
