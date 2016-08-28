@@ -1,8 +1,10 @@
 <?php
-$user = "admin";
-$password = "admin";
-$server = "localhost";
-$db = "debate";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$dbconnect = mysqli_connect($server, $user, $password, $db);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$dbconnect = new mysqli($server, $username, $password, $db);
 ?>
