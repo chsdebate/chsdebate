@@ -1,9 +1,9 @@
 <?php
 $today = date("Y");
 require 'scripts/php/dbconnect.php';
-$username = $_POST['userreg'];
-$password = $_POST['passreg'];
-$password_confirmation = $_POST['passconreg'];
+$username = mysqli_real_escape_string($dbconnect, $_POST['userreg']);
+$password = mysqli_real_escape_string($dbconnect, $_POST['passreg']);
+$password_confirmation = mysqli_real_escape_string($dbconnect, $_POST['passconreg']);
 $salt = mt_rand();
 echo $salt."<br>";
 $pass = hash('sha256', $password);

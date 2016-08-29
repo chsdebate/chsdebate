@@ -1,8 +1,8 @@
 <?php
 session_start();
 require 'scripts/php/dbconnect.php';
-$username = $_POST['user'];
-$password = $_POST['pass'];
+$username = mysqli_real_escape_string($dbconnect, $_POST['user']);
+$password = mysqli_real_escape_string($dbconnect, $_POST['pass']);
 $result = mysqli_query($dbconnect, "SELECT * FROM `login` WHERE `username` = '$username'");
 if (isset($result)){}
 else{
