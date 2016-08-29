@@ -28,42 +28,44 @@ $(document).ready(function () {
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <?php
-                    if (isset($error)){
-                        if($error == 1){
-                    ?>
-                                    <strong>Password Confirmation Failed</strong>
-                    <?php
-                    }
-                        elseif($error == 2){
-                    ?>
-                                    <strong>Username not found</strong>
-                    <?php
+                    <div class="col-md-12">
+                        <?php
+                        if (isset($error)){
+                            if($error == 1){
+                        ?>
+                                        <strong>Password Confirmation Failed</strong>
+                        <?php
                         }
-                        elseif($error == 3){
-                    ?>
-                                    <strong>Password does not match record</strong>
-                    <?php
-                        }
-                        elseif($error == 4){
-                    ?>
-                                    <strong>Username on Record</strong>
-                    <?php
-                        }
-                        elseif($error == 0){
-                    ?>
-                                    <strong>SUCCESS!!!</strong>
-                    <?php
-                        }
-                        elseif($error == 5){
-                    ?>
-                                    <strong>Couldn't add some salt to that pepper</strong>
-                    <?php
-                        }
+                            elseif($error == 2){
+                        ?>
+                                        <strong>Username not found</strong>
+                        <?php
+                            }
+                            elseif($error == 3){
+                        ?>
+                                        <strong>Password does not match record</strong>
+                        <?php
+                            }
+                            elseif($error == 4){
+                        ?>
+                                        <strong>Username on Record</strong>
+                        <?php
+                            }
+                            elseif($error == 0){
+                        ?>
+                                        <strong>SUCCESS!!!</strong>
+                        <?php
+                            }
+                            elseif($error == 5){
+                        ?>
+                                        <strong>Couldn't add some salt to that pepper</strong>
+                        <?php
+                            }
+                            else{}
+    }
                         else{}
-}
-                    else{}
-                    ?>
+                        ?>
+                    </div>
                 </div>
                     <div class="row">
                         <div class="col-md-6">

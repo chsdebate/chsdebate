@@ -10,5 +10,15 @@ $pass = hash('sha256', $password);
 $total = hash('sha256', $salt . $pass);
 echo $pass."<br>";
 echo $total;
-mysqli_query($dbconnect, "INSERT INTO `login`(`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$username','$pass','$salt','$total',1,'$today');");
-header('Location: login.php?error=0');
+$user_check_query = "SELECT `username` FROM `login`;";
+$user_check = mysqli_query($dbconnect,$user_check_query);
+$rowcount = mysqli_num_rows($user_check);
+
+if($rowcount == 1){
+    header('Location: login.php?error=4');
+}
+else {
+    mysqli_query($dbconnect, "INSERT INTO `login`(`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$username','$pass','$salt','$total',1,'$today');");
+    header('Location: login.php?error=0');
+}
+?>
