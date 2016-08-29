@@ -3,7 +3,7 @@
 session_start();
 require 'scripts/php/dbconnect.php';
 require 'base.php';
-if (isset($error)){
+if (isset($_GET['error'])){
     $error = $_GET['error'];
 }
 ?>
