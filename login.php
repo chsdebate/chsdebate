@@ -109,6 +109,9 @@ $(document).ready(function () {
                             </div>
                         </div>
                 </div>
+                <div class="row">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
+                </div>
         </div>
         <!-- /#page-content-wrapper -->
 

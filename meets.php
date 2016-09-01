@@ -211,6 +211,9 @@ $t7 = $row{'t7'};
                           </div>
                         </div>
                 <?php } ?>
+                <div class="row">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->

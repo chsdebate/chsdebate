@@ -44,6 +44,9 @@ $message = $_GET['message'];
                         <button class="btn btn-primary" href="mailto:centurypanthersdebate@gmail.com">Contact Us</button>
                     </div>
                 </div>
+                <div class="row">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->

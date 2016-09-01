@@ -34,6 +34,9 @@ require 'base.php';
                         <p>Students debate with a partner in 4 rounds per tournament, each round lasting approximately 1 hour. They defend the resolution (argue the affirmative) in two rounds, and negate the resolution (argue the negative) in two rounds. Judges score each round, assigning points for effective argumentation, adherence to procedure, and speaker performance. Team and individual rankings are established, and winners are recognized at an awards ceremony at the conclusion of each tournament.</p>
                     </div>
                 </div>
+                <div class="row">
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
