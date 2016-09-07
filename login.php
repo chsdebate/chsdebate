@@ -36,6 +36,7 @@ $(document).ready(function () {
                                         <strong>Password Confirmation Failed</strong>
                         <?php
                         }
+<<<<<<< HEAD
                             elseif($error == 2){
                         ?>
                                         <strong>Username not found</strong>
@@ -63,6 +64,13 @@ $(document).ready(function () {
                             }
                             else{}
     }
+=======
+                        elseif(error == 6){
+                    ?>
+                                    <strong>PHP Error Catch: Empty Field</strong>
+                    <?php        
+                        }
+>>>>>>> refs/remotes/origin/master
                         else{}
                         ?>
                     </div>
