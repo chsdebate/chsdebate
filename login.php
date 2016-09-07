@@ -1,11 +1,9 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 session_start();
 require 'scripts/php/dbconnect.php';
 require 'base.php';
-if (isset($error)){
-    $error = $_GET['error'];
-}
+$error = $_GET['error'];
 ?>
 <html lang="en">
 
