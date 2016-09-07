@@ -65,7 +65,7 @@ $(document).ready(function () {
                             else{}
     }
 =======
-                        elseif(error == 6){
+                        elseif($error == 6){
                     ?>
                                     <strong>PHP Error Catch: Empty Field</strong>
                     <?php        
