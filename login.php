@@ -60,6 +60,11 @@ $(document).ready(function () {
                                     <strong>Couldn't add some salt to that pepper</strong>
                     <?php
                         }
+                        elseif(error == 6){
+                    ?>
+                                    <strong>PHP Error Catch: Empty Field</strong>
+                    <?php        
+                        }
                         else{}
 }
                     else{}
