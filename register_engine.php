@@ -13,7 +13,7 @@ if($rowcount == 1){
 }
 else {
     if(empty($password) || empty($username)){
-        header('Location: login.php?error=0');
+        header('Location: login.php?error=6');
     }
     else{
         $pre = array("X","A","Z","D");
@@ -28,7 +28,7 @@ else {
         $total = hash('sha256', $salt . $pass);
         echo $pass."<br>";
         echo $total;
-        mysqli_query($dbconnect, "INSERT INTO `login`(`id`,`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$id',$username','$pass','$salt','$total',1,'$today');");
+        mysqli_query($dbconnect, "INSERT INTO `login`(`id`,`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$id','$username','$pass','$salt','$total',1,'$today');");
         echo "<br>".$id;
         //header('Location: login.php?error=0');
     }
