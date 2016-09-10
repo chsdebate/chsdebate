@@ -3,7 +3,6 @@ error_reporting(0);
 session_start();
 require 'scripts/php/dbconnect.php';
 require 'base.php';
-<<<<<<< HEAD
 if (isset($_GET['error'])){
     $error = $_GET['error'];
 }
