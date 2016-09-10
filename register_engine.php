@@ -29,7 +29,8 @@ else {
         echo $pass."<br>";
         echo $total;
         mysqli_query($dbconnect, "INSERT INTO `login`(`id`,`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$id',$username','$pass','$salt','$total',1,'$today');");
-        header('Location: login.php?error=0');
+        echo "<br>".$id;
+        //header('Location: login.php?error=0');
     }
 }
 ?>
