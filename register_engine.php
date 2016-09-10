@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 $today = date("Y");
 require 'scripts/php/dbconnect.php';
 $username = mysqli_real_escape_string($dbconnect, $_POST['userreg']);
