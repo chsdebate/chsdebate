@@ -35,7 +35,6 @@ else{
     $total = hash('sha256', $salt . $pass);
     echo $pass."<br>";
     echo $total;
-    mysqli_query($dbconnect, "INSERT INTO `login`(`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$username','$pass','$salt','$total',1,'$today');");
     mysqli_query($dbconnect, "INSERT INTO `login`(`id`,`username`, `password`, `salt`, `total_pass`, `acct_type`, `member`) VALUES ('$id',$username','$pass','$salt','$total',1,'$today');");
     header('Location: login.php?error=0');
 }
