@@ -1,8 +1,8 @@
 <?php
 session_start();
 require 'scripts/php/dbconnect.php';
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
+$fname = mysqli_real_escape_string($dbconnect,$_POST['fname']);
+$lname = mysqli_real_escape_string($dbconnect,$_POST['lname']);
 $user = $_SESSION['user'];
 echo $fname;
 $resul = mysqli_query($dbconnect, "SELECT * FROM `login` WHERE `username` = '$user'");
