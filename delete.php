@@ -1,6 +1,6 @@
 <?php
 require 'scripts/php/dbconnect.php';
-$id = $_GET['id'];
+$id = mysqli_real_escape_string($dbconnect,$_GET['id']);
 $delete = mysqli_query($dbconnect, "DELETE FROM `login` WHERE `id` = '$id'");
 header('Location: main.php?user=2');
 ?>

@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 session_start();
 require 'scripts/php/dbconnect.php';
 require 'base.php';
@@ -36,7 +36,6 @@ $(document).ready(function () {
                                         <strong>Password Confirmation Failed</strong>
                         <?php
                         }
-<<<<<<< HEAD
                             elseif($error == 2){
                         ?>
                                         <strong>Username not found</strong>
@@ -62,15 +61,19 @@ $(document).ready(function () {
                                         <strong>Couldn't add some salt to that pepper</strong>
                         <?php
                             }
+<<<<<<< HEAD
                             else{}
     }
 =======
                         elseif($error == 6){
+=======
+                            elseif($error == 6){
+>>>>>>> origin/heroku
                     ?>
                                     <strong>PHP Error Catch: Empty Field</strong>
                     <?php        
+                            }
                         }
->>>>>>> refs/remotes/origin/master
                         else{}
                         ?>
                     </div>
