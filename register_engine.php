@@ -5,7 +5,7 @@ $username = mysqli_real_escape_string($dbconnect, $_POST['userreg']);
 $password = mysqli_real_escape_string($dbconnect, $_POST['passreg']);
 $password_confirmation = mysqli_real_escape_string($dbconnect, $_POST['passconreg']);
 if(empty($password) || empty($username)){
-    header('Location: login.php?error=0');
+    header('Location: login.php?error=6');
 }
 else{
     $pre = array("X","A","Z","D");
