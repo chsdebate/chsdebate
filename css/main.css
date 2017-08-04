@@ -15,14 +15,14 @@
     float: right;
 }
 */
-h1 {
+/* h1 {
 	font-family: cursive;
 	/*font-size: 1.5em;*/
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
 	/*line-height: 1.1em;*/
-}
+} */
 #image {
     max-width: 170%;
 }
