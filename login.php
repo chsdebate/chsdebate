@@ -61,14 +61,14 @@ $(document).ready(function () {
                                         <strong>Couldn't add some salt to that pepper</strong>
                         <?php
                             }
-<<<<<<< HEAD
+
                             else{}
     }
-=======
+
                         elseif($error == 6){
-=======
+
                             elseif($error == 6){
->>>>>>> origin/heroku
+
                     ?>
                                     <strong>PHP Error Catch: Empty Field</strong>
                     <?php        
