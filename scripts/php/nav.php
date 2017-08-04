@@ -16,6 +16,9 @@ while($row = mysqli_fetch_array($result)){
                 if(isset($_SESSION['user'])){
             ?>
                 <li>
+                    <a href="meets.php">Meets</a>
+                </li>
+                <li>
                     <a href="logout.php">Logout</a>
                 </li>
             <?php

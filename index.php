@@ -27,7 +27,6 @@ $message = $_GET['message'];
                         <h1><font size="18">Century Debate Team</font></h1>
                         <br>
                         <p>Welcome to the Century Debate Team's website!</p>
-                        <p>Universal Access <code>X24</code>.</p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
                     </div>
                 </div>
