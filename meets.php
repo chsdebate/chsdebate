@@ -135,6 +135,7 @@ $t7 = $row{'t7'};
                 <?php if ($acct == 2) { ?>
                 <div class="row">
                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Meet Schedule</button></div>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Edit Meet Schedule</button></div>
 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
@@ -156,6 +157,33 @@ $t7 = $row{'t7'};
                                         <div class="form-group">
                                             <label>Number to Replace</label>
                                             <input type="text" class="form-control" name="newnumber">
+                                        </div>
+                                    <br>
+                                        <button type="submit" class="btn btn-success">EDIT</button>
+                                    </form>
+                                </fieldset>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                <div id="myModal1" class="modal fade" role="dialog">
+                          <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ADMINISTRATOR EDIT</h4>
+                              </div>
+                              <div class="modal-body">
+                                <fieldset style="width:50%"><legend>Edit</legend>
+                                    <form method="POST" action="meet_engine2.php">
+                                        <div class="form-group">
+                                            <label>Meet</label>
+                                            <input type="number" class="form-control" name="meet">
                                         </div>
                                     <br>
                                         <button type="submit" class="btn btn-success">EDIT</button>
