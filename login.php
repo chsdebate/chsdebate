@@ -134,4 +134,5 @@ $(document).ready(function () {
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+</html>
     <?php disconnect(); ?>
