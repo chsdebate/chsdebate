@@ -1,6 +1,6 @@
 <?php
 require 'scripts/php/dbconnect.php';
-$meet = "t" + $_POST['meet'];
+$meet = "t" + $_GET['meet'];
 $new_meet = mysqli_real_escape_string($dbconnect,$meet);
 echo $new_meet;
 sleep(15);
