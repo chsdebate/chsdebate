@@ -1,7 +1,7 @@
 <?php
 session_start();
-//require 'scripts/php/dbconnect.php';
-//require 'base.php';
+require 'scripts/php/dbconnect.php';
+require 'base.php';
 if (isset($_GET['error'])){
     $error = $_GET['error'];
 }
@@ -66,12 +66,9 @@ $(document).ready(function () {
 
                         elseif($error == 6){
 
-                            elseif($error == 6){
-
                     ?>
                                     <strong>PHP Error Catch: Empty Field</strong>
                     <?php        
-                            }
                         }
                         else{}
                         ?>
