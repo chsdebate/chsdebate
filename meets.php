@@ -135,7 +135,7 @@ $t7 = $row{'t7'};
                 <?php if ($acct == 2) { ?>
                 <div class="row">
                     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Meet Schedule</button></div>
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Edit Meet Schedule</button></div>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Erase Participants</button></div>
 
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
