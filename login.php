@@ -1,7 +1,7 @@
 <?php
 session_start();
-require 'scripts/php/dbconnect.php';
-require 'base.php';
+include 'scripts/php/dbconnect.php';
+include 'base.php';
 if (isset($_GET['error'])){
     $error = $_GET['error'];
 }
