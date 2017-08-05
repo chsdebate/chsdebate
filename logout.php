@@ -4,5 +4,6 @@ session_start();
 session_unset();
 // destroy the session
 session_destroy();
+disconnect();
 header('Location: index.php');
 ?>

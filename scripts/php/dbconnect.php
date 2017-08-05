@@ -7,4 +7,8 @@ $password = $url["pass"];
 $db = substr($url["path"], 1);
 
 $dbconnect = new mysqli($server, $username, $password, $db);
+
+function disconnect() {
+    mysqli_close($dbconnect);
+}
 ?>

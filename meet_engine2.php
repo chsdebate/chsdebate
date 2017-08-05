@@ -5,5 +5,6 @@ sleep(5);
 mysqli_query($dbconnect, "UPDATE `meets` SET `where`= '$new_meet' WHERE `id` = '$new_number'");
 $meet = "t" + $new_meet;
 mysqli_query($dbconnect, "update `login` set `$meet` = 0;");
+disconnect();
 header('Location: meets.php');
 ?>

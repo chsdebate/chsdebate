@@ -118,3 +118,4 @@ $id1 = $row{'id'};
 </body>
 
 </html>
+<?php disconnect(); ?>

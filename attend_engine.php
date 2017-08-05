@@ -16,5 +16,6 @@ foreach($_POST['list'] as $selected) {
         mysqli_query($dbconnect, "UPDATE `login` SET `$tselected`= 0 WHERE `username` = '$user'");
     }
 }
+disconnect();
 header('Location: meets.php');
 ?>

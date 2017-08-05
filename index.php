@@ -60,3 +60,4 @@ $message = $_GET['message'];
 </body>
 
 </html>
+<?php disconnect(); ?>

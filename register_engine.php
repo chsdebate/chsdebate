@@ -8,6 +8,8 @@ $user_check_query = "SELECT `username` FROM `login` WHERE `username` = '$usernam
 $user_check = mysqli_query($dbconnect,$user_check_query);
 $rowcount = mysqli_num_rows($user_check);
 
+disconnect();
+
 if($rowcount == 1){
     header('Location: login.php?error=4');
 }

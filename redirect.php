@@ -7,6 +7,7 @@ $row = mysqli_fetch_array($result);
 $today = date("m/d/Y");
 $date = mysqli_query($dbconnect, "UPDATE `login` SET `active`='$today' WHERE `username` = '$user'");
 $acct_type = $row{'acct_type'};
+disconnect();
 if($acct_type==1){
     header('Location: main.php?user=1');
 }

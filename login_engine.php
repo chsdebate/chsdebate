@@ -35,4 +35,5 @@ else{
         header('Location: login.php?error=2');
     }
 }
+disconnect();
 ?>

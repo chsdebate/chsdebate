@@ -9,5 +9,6 @@ $resul = mysqli_query($dbconnect, "SELECT * FROM `login` WHERE `username` = '$us
 $row = mysqli_fetch_array($resul);
 $type = $row{'acct_type'};
 $result = mysqli_query($dbconnect, "UPDATE `login` SET `fname`='$fname',`lname`='$lname' WHERE `username` = '$user'");
+disconnect();
 header('Location: main.php?user='.$type);
 ?>

@@ -61,3 +61,4 @@ require 'base.php';
 </body>
 
 </html>
+<?php disconnect(); ?>
