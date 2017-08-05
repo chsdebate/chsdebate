@@ -45,7 +45,7 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <?php echo row{'t1s'}; ?>
+                <?php echo row['t1s']; ?>
                 <div class="row">
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
                 </div>
