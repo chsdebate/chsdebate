@@ -1,7 +1,7 @@
 <?php
 session_start();
-include 'scripts/php/dbconnect.php';
-include 'base.php';
+require 'scripts/php/dbconnect.php';
+require 'base.php';
 if (isset($_GET['error'])){
     $error = $_GET['error'];
 }
@@ -128,7 +128,7 @@ $(document).ready(function () {
     </div>
     </div>
     <!-- /#wrapper -->
-
+    </body>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
