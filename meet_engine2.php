@@ -6,5 +6,5 @@ echo $new_meet;
 sleep(15);
 mysqli_query($dbconnect, "update `login` set `$new_meet` = 0;");
 disconnect();
-header('Location: meets.php');
+//header('Location: meets.php');
 ?>
