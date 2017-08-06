@@ -66,8 +66,8 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
                                     <td>Round 1</td>
                                     <?php 
                                         for($i=1;$i<8;$i++){
-                                            $r1 = "t".$i."a";
-                                            echo "<td>".$row['$r1']."</td>";
+                                            $r1 = "'t".$i."a'";
+                                            echo "<td>".$row[$r1]."</td>";
                                         }
                                     ?>
                                 </tr>
