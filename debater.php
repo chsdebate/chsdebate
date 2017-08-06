@@ -6,7 +6,7 @@ include 'scripts/php/dbconnect.php';
 $user = $_SESSION['user'];
 $id = $_GET['id'];
 $new = mysqli_real_escape_string($dbconnect,$id);
-$query = mysqli_query($dbconnect, "select * from `login` where `id` = `$new`;");
+$query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
 $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
 ?>
 <html lang="en">
