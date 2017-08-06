@@ -47,7 +47,7 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <?php if(!$row){ echo "Debater not found"; } else { ?>
+                        <?php if(!$query){ echo "Debater not found"; } else { ?>
                         <table class="table">
                             <thead>
                                 <tr>
