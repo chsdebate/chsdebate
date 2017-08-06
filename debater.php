@@ -45,6 +45,62 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Tournament 1</td>
+                                    <td>Tournament 2</td>
+                                    <td>Tournament 3</td>
+                                    <td>Tournament 4</td>
+                                    <td>Tournament 5</td>
+                                    <td>Tournament 6</td>
+                                    <td>Tournament 7</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Round 1</td>
+                                    <?php 
+                                        for($i=1;$i<8;$i++){
+                                            $r1 = "t".$i."a";
+                                            echo "<td>".$row[$r1]."</td>";
+                                        }
+                                    ?>
+                                </tr>
+                                <tr>
+                                    <td>Round 2</td>
+                                    <?php 
+                                        for($i=1;$i<8;$i++){
+                                            $r2 = "t".$i."b";
+                                            echo "<td>".$row[$r2]."</td>";
+                                        }
+                                    ?>
+                                </tr>
+                                <tr>
+                                    <td>Round 3</td>
+                                    <?php 
+                                        for($i=1;$i<8;$i++){
+                                            $r3 = "t".$i."c";
+                                            echo "<td>".$row[$r3]."</td>";
+                                        }
+                                    ?>
+                                </tr>
+                                <tr>
+                                    <td>Round 4</td>
+                                    <?php 
+                                        for($i=1;$i<8;$i++){
+                                            $r4 = "t".$i."d";
+                                            echo "<td>".$row[$r4]."</td>";
+                                        }
+                                    ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <?php echo row['t1s']; ?>
                 <div class="row">
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
