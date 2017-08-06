@@ -68,7 +68,7 @@ $row = mysqli_fetch_assoc($query);
                                     <?php 
                                         for($i=1;$i<8;$i++){
                                             $r1 = "'t".$i."a'";
-                                            echo "<td>".$row['t1a']."</td>";
+                                            echo "<td>".$row["t1a"]."</td>";
                                         }
                                     ?>
                                 </tr>
