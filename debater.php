@@ -47,6 +47,7 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+                        <?php if(!$row){ echo "Debater not found"; } else { ?>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -113,6 +114,7 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
                                 </tr>
                             </tbody>
                         </table>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="row">
