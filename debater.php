@@ -8,7 +8,7 @@ $id = $_GET['id'];
 $new = mysqli_real_escape_string($dbconnect,$id);
 $query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
 //$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
-$row = mysqli_fetch_assoc($query);
+$row = mysqli_fetch_array($query);
 ?>
 <html lang="en">
 <head>
