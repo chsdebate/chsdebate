@@ -1,7 +1,7 @@
 <?php
 require 'scripts/php/secure.php';
 //session_start();
-error_reporting(0);
+//error_reporting(0);
 include 'scripts/php/dbconnect.php';
 $user = $_SESSION['user'];
 $id = $_GET['id'];
