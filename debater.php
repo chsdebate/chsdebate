@@ -97,11 +97,24 @@ $row = mysqli_fetch_array($query,MYSQLI_ASSOC);
                                         }
                                     ?>
                                 </tr>
+                                <tr>
+                                    <td>Average</td>
+                                    <?php
+                                        for($i=1;$i<8;$i++){
+                                            $r1 = "t".$i."a";
+                                            $r2 = "t".$i."b";
+                                            $r3 = "t".$i."c";
+                                            $r4 = "t".$i."d";
+                                            $sum = $row[$r1]+$row[$r2]+$row[$r3]+$row[$r4];
+                                            $average = $sum/4;
+                                            echo "<td>".$average."</td>";
+                                        }
+                                    ?>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <?php echo row['t1s']; ?>
                 <div class="row">
                     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu: Affirmitive or Negative?</a>
                 </div>
