@@ -18,6 +18,8 @@ function base($title){
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    
+    <script src="js/jquery.js"></script>
 
     <!-- HTML5 Shim hand Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

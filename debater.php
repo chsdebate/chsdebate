@@ -6,11 +6,11 @@ include 'scripts/php/dbconnect.php';
 $user = $_SESSION['user'];
 $id = $_GET['id'];
 $new = mysqli_real_escape_string($dbconnect,$id);
+$query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
+//$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
+$row = mysqli_fetch_array($query);
+echo "<h1>" . $row['t1d'] . "</h1>";
 
-function que() {
-    $query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
-    $row = mysqli_fetch_array($query);
-}
 ?>
 <html lang="en">
 <head>
@@ -29,6 +29,8 @@ function que() {
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    
+    <script src="js/jquery.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,6 +41,39 @@ function que() {
 
 </head>
 
+<script>
+            $(document).ready(function() {
+                
+                function mess(){
+                    
+                    $.ajax({
+                      url: 'api.php?id=<?php echo $new; ?>',                  //the script to call to get data          
+                      data: "",                        //you can insert url argumnets here to pass to api.php
+                                                       //for example "id=5&parent=6"
+                      dataType: 'json',                //data format      
+                      success: function(data)          //on recieve of reply
+                      {
+                        //var id = data['UserID'];              //get id
+                        //var vname = data['Message'];           //get name
+                        //--------------------------------------------------------------------
+                        // 3) Update html content
+                        //--------------------------------------------------------------------
+                          //var result;
+                          //var obj = $.parseJSON(data);
+                          console.log(data);
+                          $.each(data, function(){
+
+                              result = "<tr><td><b>"+this['fname']+"</b></td><td>"+this['Message']+"</td><td id='dat'>"+this['Status']+"</td></tr>"; //Set output element html
+
+                              $("#ta").append(result);
+                          });
+                      } 
+                    });
+                }
+            }
+                        
+        </script>
+    
 <body>
 
     <div id="wrapper">
@@ -67,8 +102,7 @@ function que() {
                             <tbody>
                                 <tr>
                                     <td>Round 1</td>
-                                    <?php
-                                        que();
+                                    <?php 
                                         for($i=1;$i<8;$i++){
                                             $r1 = "'t".$i."a'";
                                             echo "<td>".$row{'t1a'}."</td>";
