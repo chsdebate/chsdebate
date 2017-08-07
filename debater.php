@@ -9,6 +9,7 @@ $new = mysqli_real_escape_string($dbconnect,$id);
 $query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
 //$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
 $row = mysqli_fetch_array($query);
+echo "<h1>" . $row . "</h1>";
 ?>
 <html lang="en">
 <head>
