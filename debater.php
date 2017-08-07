@@ -9,7 +9,7 @@ $new = mysqli_real_escape_string($dbconnect,$id);
 $query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
 //$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
 $row = mysqli_fetch_array($query);
-echo "<h1>" . $row['t1a'] . "</h1>";
+echo "<h1>" . $row['t1d'] . "</h1>";
 ?>
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@ echo "<h1>" . $row['t1a'] . "</h1>";
                                     <?php 
                                         for($i=1;$i<8;$i++){
                                             $r1 = "'t".$i."a'";
-                                            echo "<td>".$row{$r1}."</td>";
+                                            echo "<td>".$row{'t1a'}."</td>";
                                         }
                                     ?>
                                 </tr>
