@@ -69,7 +69,7 @@ echo "<h1>" . $row . "</h1>";
                                     <?php 
                                         for($i=1;$i<8;$i++){
                                             $r1 = "'t".$i."a'";
-                                            echo "<td>".$row["t1a"]."</td>";
+                                            echo "<td>".$row[24]."</td>";
                                         }
                                     ?>
                                 </tr>
