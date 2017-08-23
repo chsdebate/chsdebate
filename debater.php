@@ -9,7 +9,6 @@ $new = mysqli_real_escape_string($dbconnect,$id);
 $query = mysqli_query($dbconnect, "select * from `login` where `id` = $new;");
 //$row = mysqli_fetch_array($query,MYSQLI_ASSOC);
 $row = mysqli_fetch_array($query);
-echo "<h1>" . $row['t1d'] . "</h1>";
 
 ?>
 <html lang="en">
@@ -65,14 +64,14 @@ echo "<h1>" . $row['t1d'] . "</h1>";
 
                               result = "<tr><td><b>"+this['t1a']+"</b></td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
                               
-                              result1 = "<tr><td><b>"+this['t1b']+"</b></td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
-                              result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
-                              result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
+                              //result1 = "<tr><td><b>"+this['t1b']+"</b></td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
+                              //result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
+                              //result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
 
                               $("#ta").append(result);
-                              $("#ta").append(result1);
-                              $("#ta").append(result2);
-                              $("#ta").append(result3);
+                             // $("#ta").append(result1);
+                              //$("#ta").append(result2);
+                              //$("#ta").append(result3);
                           });
                       } 
                     });
