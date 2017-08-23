@@ -13,7 +13,7 @@ require 'base.php';
   $result = mysqli_query($dbconnect, $querymess);          //query
     //$result2 = mysql_query($queryfrom);
   //$array = mysql_fetch_array($result);                          //fetch result    
-if(mysqli_num_rows($querymess) == 0){
+if(mysqli_num_rows($result) == 0){
     echo "user not found";
 }
   //--------------------------------------------------------------------------
