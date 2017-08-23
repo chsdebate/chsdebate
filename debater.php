@@ -63,9 +63,16 @@ echo "<h1>" . $row['t1d'] . "</h1>";
                           console.log(data);
                           $.each(data, function(){
 
-                              result = "<tr><td><b>"+this['fname']+"</b></td><td>"+this['Message']+"</td><td id='dat'>"+this['Status']+"</td></tr>"; //Set output element html
+                              result = "<tr><td><b>"+this['t1a']+"</b></td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
+                              
+                              result1 = "<tr><td><b>"+this['t1b']+"</b></td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
+                              result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
+                              result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
 
                               $("#ta").append(result);
+                              $("#ta").append(result1);
+                              $("#ta").append(result2);
+                              $("#ta").append(result3);
                           });
                       } 
                     });
@@ -86,71 +93,8 @@ echo "<h1>" . $row['t1d'] . "</h1>";
                 <div class="row">
                     <div class="col-md-12">
                         <?php if(mysqli_num_rows($query) == 0){ echo "Debater not found"; } else { ?>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <td></td>
-                                    <td>Tournament 1</td>
-                                    <td>Tournament 2</td>
-                                    <td>Tournament 3</td>
-                                    <td>Tournament 4</td>
-                                    <td>Tournament 5</td>
-                                    <td>Tournament 6</td>
-                                    <td>Tournament 7</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Round 1</td>
-                                    <?php 
-                                        for($i=1;$i<8;$i++){
-                                            $r1 = "'t".$i."a'";
-                                            echo "<td>".$row{'t1a'}."</td>";
-                                        }
-                                    ?>
-                                </tr>
-                                <tr>
-                                    <td>Round 2</td>
-                                    <?php 
-                                        for($i=1;$i<8;$i++){
-                                            $r2 = "t".$i."b";
-                                            echo "<td>".$row[$r2]."</td>";
-                                        }
-                                    ?>
-                                </tr>
-                                <tr>
-                                    <td>Round 3</td>
-                                    <?php 
-                                        for($i=1;$i<8;$i++){
-                                            $r3 = "t".$i."c";
-                                            echo "<td>".$row[$r3]."</td>";
-                                        }
-                                    ?>
-                                </tr>
-                                <tr>
-                                    <td>Round 4</td>
-                                    <?php 
-                                        for($i=1;$i<8;$i++){
-                                            $r4 = "t".$i."d";
-                                            echo "<td>".$row[$r4]."</td>";
-                                        }
-                                    ?>
-                                </tr>
-                                <tr>
-                                    <td>Average</td>
-                                    <?php
-                                        for($i=1;$i<8;$i++){
-                                            $r1 = "t".$i."a";
-                                            $r2 = "t".$i."b";
-                                            $r3 = "t".$i."c";
-                                            $r4 = "t".$i."d";
-                                            $sum = $row[$r1]+$row[$r2]+$row[$r3]+$row[$r4];
-                                            $average = $sum/4;
-                                            echo "<td>".$average."</td>";
-                                        }
-                                    ?>
-                                </tr>
-                            </tbody>
+                        <table id="ta" class="table">
+                            
                         </table>
                         <?php } ?>
                     </div>
