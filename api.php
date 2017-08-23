@@ -13,9 +13,7 @@ require 'base.php';
   $result = mysqli_query($dbconnect, $querymess);          //query
     //$result2 = mysql_query($queryfrom);
   //$array = mysql_fetch_array($result);                          //fetch result    
-if(mysqli_num_rows($result) == 0){
-    echo "user not found!";
-}
+if(mysqli_num_rows($result) > 0){
   //--------------------------------------------------------------------------
   // 3) echo result as json 
   //--------------------------------------------------------------------------
@@ -29,5 +27,8 @@ $rows = array();
 //    }
 $j = json_encode($rows);
   echo $j;
-
+}
+else {
+    echo "not found";
+}
 ?>
