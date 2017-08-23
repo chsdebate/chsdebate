@@ -1,5 +1,6 @@
 <?php
 $id = $_GET['id'];
+echo $id;
 if(!$id){
     echo "none";
 }
@@ -18,7 +19,7 @@ if(mysqli_num_rows($result) > 0){
   // 3) echo result as json 
   //--------------------------------------------------------------------------
 $rows = array();
-    while($r = mysql_fetch_assoc($result)){
+    while($r = mysqli_fetch_assoc($result)){
         $rows[] = $r; //has the same effect, without the superfluous data attribute
         //$rows[] = array('data' => $r);
     }
