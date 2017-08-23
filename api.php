@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-if(!id){
+if(!$id){
     echo "none";
 }
 require 'scripts/php/dbconnect.php';
