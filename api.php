@@ -8,7 +8,7 @@ require 'base.php';
   //--------------------------------------------------------------------------
   // 2) Query database for data
   //--------------------------------------------------------------------------
-    $querymess = "select * from `login` where `id` = $id;";
+    $querymess = "select * from `login` where `id` = ".$id.";";
     //$queryfrom = "SELECT `UserID`, `Username` FROM `users`";
   $result = mysqli_query($dbconnect, $querymess);          //query
     //$result2 = mysql_query($queryfrom);
