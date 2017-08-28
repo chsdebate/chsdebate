@@ -60,7 +60,7 @@ $row = mysqli_fetch_array($query);
                           //var result;
                           //var obj = $.parseJSON(data);
                           console.log(data);
-                          $("#ta tr").remove();
+                          $("#ta tr thead tbody").remove();
                           $.each(data, function(){
                               head = "<thead><tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr></thead><tbody>";
 
