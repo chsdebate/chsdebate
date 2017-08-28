@@ -62,7 +62,7 @@ $row = mysqli_fetch_array($query);
                           console.log(data);
                           $("#ta tr").remove();
                           $.each(data, function(){
-                              head = "<thead><tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr></thead><tbody>"
+                              head = "<thead><tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr></thead><tbody>";
 
                               result = "<tr><td><b>"+this['t1a']+"</b></td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
                               
@@ -70,7 +70,7 @@ $row = mysqli_fetch_array($query);
                               result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
                               result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
                               
-                              end = "</tbody>"
+                              end = "</tbody>";
                               
                               $("#load").css("visibility", "hidden");
                               $("#ta").append(head);
