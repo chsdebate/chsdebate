@@ -77,7 +77,6 @@ $row = mysqli_fetch_array($query);
                       } 
                     });
                 }
-                setInterval(mess,100000);
             });
                         
         </script>
