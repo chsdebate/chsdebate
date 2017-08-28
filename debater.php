@@ -60,25 +60,19 @@ $row = mysqli_fetch_array($query);
                           //var result;
                           //var obj = $.parseJSON(data);
                           console.log(data);
-                          $("#ta tr thead tbody").remove();
+                          $("#ta tr").remove();
                           $.each(data, function(){
-                              head = "<thead><tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr></thead><tbody>";
-
                               result = "<tr><td><b>"+this['t1a']+"</b></td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
                               
                               result1 = "<tr><td><b>"+this['t1b']+"</b></td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
                               result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
                               result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
                               
-                              end = "</tbody>";
-                              
                               $("#load").css("visibility", "hidden");
-                              $("#ta").append(head);
                               $("#ta").append(result);
                               $("#ta").append(result1);
                               $("#ta").append(result2);
                             $("#ta").append(result3);
-                              $("#ta").append(end);
                           });
                       } 
                     });
@@ -101,6 +95,11 @@ $row = mysqli_fetch_array($query);
                     <div class="col-md-12">
                         <?php if(mysqli_num_rows($query) == 0){ echo "Debater not found"; } else { ?>
                         <button class="btn btn-xs btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
+                        <table class="table"> 
+                            <thead>
+                                <tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr>
+                            </thead>
+                        </table>
                         <table id="ta" class="table">
                             
                         </table>
