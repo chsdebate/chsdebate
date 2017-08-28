@@ -62,11 +62,11 @@ $row = mysqli_fetch_array($query);
                           console.log(data);
                           $("#ta tr").remove();
                           $.each(data, function(){
-                              result = "<tr><td><b>"+this['t1a']+"</b></td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
+                              result = "<tr><td><b>1</b></td><td>"+this['t1a']+"</td><td>"+this['t2a']+"</td><td>"+this['t3a']+"</td><td>"+this['t4a']+"</td></tr>"; //Set output element html
                               
-                              result1 = "<tr><td><b>"+this['t1b']+"</b></td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
-                              result2 = "<tr><td><b>"+this['t1c']+"</b></td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
-                              result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
+                              result1 = "<tr><td><b>2</b></td><td>"+this['t1b']+"</td><td>"+this['t2b']+"</td><td>"+this['t3b']+"</td><td>"+this['t4b']+"</td></tr>";
+                              result2 = "<tr><td><b>3</b></td><td>"+this['t1c']+"</td><td>"+this['t2c']+"</td><td>"+this['t3c']+"</td><td>"+this['t4c']+"</td></tr>";
+                              result3 = "<tr><td><b>4</b></td><td>"+this['t1d']+"</td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
                               
                               $("#load").css("visibility", "hidden");
                               $("#ta").append(result);
@@ -97,7 +97,7 @@ $row = mysqli_fetch_array($query);
                         <button class="btn btn-xs btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
                         <table class="table"> 
                             <thead>
-                                <tr><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr>
+                                <tr><td>Round</td><td>Tournament 1</td><td>Tournament 2</td><td>Tournament 3</td><td>Tournament 4</td></tr>
                             </thead>
                         </table>
                         <table id="ta" class="table">
