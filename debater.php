@@ -69,6 +69,7 @@ $row = mysqli_fetch_array($query);
                               //result3 = "<tr><td><b>"+this['t1d']+"</b></td><td>"+this['t2d']+"</td><td>"+this['t3d']+"</td><td>"+this['t4d']+"</td></tr>";
 
                               $("#ta").append(result);
+                              console.log(result);
                              // $("#ta").append(result1);
                               //$("#ta").append(result2);
                               //$("#ta").append(result3);
