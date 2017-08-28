@@ -93,7 +93,10 @@ $row = mysqli_fetch_array($query);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <?php if(mysqli_num_rows($query) == 0){ echo "Debater not found"; } else { ?>
+                        <?php if(mysqli_num_rows($query) == 0){ echo "Debater not found"; } else { 
+                    echo "You are viewing scores by ".$row{'fname'}." ".$row{'lname'};
+                        ?>
+                        
                         <button class="btn btn-xs btn-warning" id="load"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
                         <table class="table"> 
                             <thead>
